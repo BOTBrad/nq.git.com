@@ -67,7 +67,9 @@
  						"mode": "EQUALS"		
  					}
 				]
-			}，
+			}
+		}，
+		{
 			"name": "Searcher 2",
 			"search": {
 				"locationPageSet": "Locations",
