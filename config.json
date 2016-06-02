@@ -76,7 +76,7 @@
 				"locationScopeOverride" : {
 					"savedSearch" : "NY"
 				},
-				"urlTemplate": "desktop.urls.search1",
+				"urlTemplate": "desktop.urls.search2",
 				"template": "desktop.search.default",
 				"queryParam": "q",
 				"maxRadiusParam": {
