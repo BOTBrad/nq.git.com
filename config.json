@@ -67,6 +67,36 @@
  						"mode": "EQUALS"		
  					}
 				]
+			}，
+			"name": "Searcher 2",
+			"search": {
+				"locationPageSet": "Locations",
+				"locationScopeOverride" : {
+					"savedSearch" : "NY"
+				},
+				"urlTemplate": "desktop.urls.search1",
+				"template": "desktop.search.default",
+				"queryParam": "q",
+				"maxRadiusParam": {
+					"name": "r",
+					"default": 50
+				},
+				"pageResultParam": {
+					"name": "per",
+					"default": 10
+				},
+				"pageToShowParam": "p",
+				"totalResultParam": {
+					"name": "max",
+					"default": 50
+				},
+				"searchFields": [
+					{		
+ 						"field": "State",		
+ 						"param": "state",		
+ 						"mode": "EQUALS"		
+ 					}
+				]
 			}
 		},
 		{
