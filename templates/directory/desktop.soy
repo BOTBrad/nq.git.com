@@ -268,7 +268,7 @@
   {let $geomodifier: $displayAddress ? $displayAddress : $city /}
   {let $isCommercialOnly: strlen($name) > strlen($commercialName) and substring($name, strlen($name) - strlen($commercialName)) == $commercialName /}
   {let $url}
-    {$customByName['Metro Branch Url'] |lower:true}
+    {$customByName['nq options'] |lower:true}
   {/let}
 
   {let $dataitem: [
