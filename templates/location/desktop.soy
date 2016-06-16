@@ -44,7 +44,7 @@
   <body>
     {call helpers.header data="all" /}
     <div class="wide-wrapper">
-      <div id="cover-photo" {if length($gallery) > 0}style="background:url({$gallery[0].sizes[0].url}) no-repeat; background-size: cover;"{/if}>
+      <div id="cover-photo" {if length($gallery) > 0}style="background:url({$gallery[0].sizes?[0]?.url}) no-repeat; background-size: cover;"{/if}>
         <div class="inner-wrapper">
           <span class="address-label">{$address1|stripnum:true}</span>
         </div>
