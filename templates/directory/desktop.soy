@@ -225,3 +225,72 @@
     ]
   {rb}
 {/template}
+
+
+/**
+ * @param baseUrl
+ * @param address1 Contains the street address
+ * @param address2 Contains the second line of the street address
+ * @param city
+ * @param state The abbreviated format of a state
+ * @param postalCode
+ * @param country Abbreviated format of a country
+ * @param latitude
+ * @param longitude
+// * @param description
+ * @param displayAddress
+ * @param hours
+ * @param phone
+// * @param phones
+// * @param specialOffer
+// * @param videos
+// * @param crumbNames
+// * @param crumbUrls
+// * @param calendars
+// * @param menus
+ * @param customByName
+ * @param name
+ * @param id
+// * @param businessId
+// * @param siteId
+// * @param locationPageSetId
+// * @param siteDomain Passthrough
+// * @param emails
+// * @param corporateCode
+ */
+{template .location}
+
+  {let $countryName}
+    {lcountryName('en_US', $country)}
+  {/let}
+
+  {let $commercialName: 'Commercial' /}
+  {let $geomodifier: $displayAddress ? $displayAddress : $city /}
+  {let $isCommercialOnly: strlen($name) > strlen($commercialName) and substring($name, strlen($name) - strlen($commercialName)) == $commercialName /}
+  {let $url}
+    {$customByName['Metro Branch Url'] |lower:true}
+  {/let}
+
+  {let $dataitem: [
+    'loc': [
+      'id': $id,
+      'url': $url,
+      'name': $name,
+      'phone':  $phone,
+      'address1':  $address1,
+      'address2': $address2,
+      'city':  $city,
+      'geomodifier': $geomodifier,
+      'state':  $state,
+      'postalCode': $postalCode,
+      'country': $countryName,
+      'latitude': $latitude,
+      'longitude': $longitude,
+      'hours': $hours,
+      'baseUrl': $baseUrl,
+      'isCommercial': $isCommercialOnly
+    ]
+  ] /}
+
+  {$dataitem |json}
+{/template}
