@@ -14,7 +14,7 @@
               <li class="product-item">
                 <div class="product-img-crop">
                   {if length($item.gallery) > 0}
-                    <img src="{$item.gallery[0].sizes[0].url}">
+                    <img src="{$item.gallery[0].sizes?[0]?.url}">
                   {/if}
                 </div>
                 <h3 class="product-label">{$item.name}</h3>
@@ -41,13 +41,13 @@
               <li class="bios-item">
                 <div class="img-name-and-title">
                   <div class="img-crop">
-                    {if $item.photo and $item.photo.sizes[0].url}
-                      {let $height: $item.photo.sizes[0].height /}
-                      {let $width: $item.photo.sizes[0].width /}
+                    {if $item.photo and $item.photo.sizes?[0]?.url}
+                      {let $height: $item.photo.sizes?[0]?.height /}
+                      {let $width: $item.photo.sizes?[0]?.width /}
                       {let $isWide: $width > $height /}
                       {let $margin: ($width - $height) / 2 /}
                       <img
-                        src="{$item.photo.sizes[0].url}"
+                        src="{$item.photo.sizes?[0]?.url}"
                         style="{if $isWide}
                                 margin-left: -{$margin/$height*150}px;
                                 height: 100%;
