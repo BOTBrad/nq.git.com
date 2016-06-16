@@ -165,7 +165,7 @@
         			}],
       				"locationPageSet": "Locations2",
       				"outputFormat": ["Html", "Json"]
-    			},
+    			}
 		},
 		{
 			"name": "Publishing Pause for Testing",
