@@ -17,16 +17,40 @@ sitemap.xml
 {/template}
 
 /**
+ * @param state
+ * @param city
+ * @param corporateCode
+ */
+{template .locationPageSet2}
+    branches/{$state|spaces:'-'|casing:'lower'}/{$city|spaces:'-'|casing:'lower'}-{$corporateCode}
+{/template}
+
+/**
  */
 {template .directory1State}
 index.html
 {/template}
 
 /**
+ */
+{template .directory2State}
+branches/index.html
+{/template}
+
+
+/**
  * @param state
  */
 {template .directory1Location}
 {$state|latin:true|other:'-'|spaces:'-'|casing:'lower'}.html
+{/template}
+
+/**
+ * @param state
+ * @param customByName
+ */
+{template .directory2Location}
+branches/{$state|spaces:'-'|casing:'lower'|latin:true|other:'-'}/{$customByName['nq options']|spaces:'-'|casing:'lower'|latin:true|other:'-'}
 {/template}
 
 {template .search1}
