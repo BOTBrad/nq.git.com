@@ -16,7 +16,7 @@
             <li class="product-item">
               <div class="product-img-crop">
                 {if length($item.gallery) > 0}
-                  <img src="{$item.gallery[0].sizes[0].url}" class="product-img">
+                  <img src="{$item.gallery[0].sizes?[0]?.url}" class="product-img">
                 {/if}
               </div>
               <h3 class="product-label">{$item.name}</h3>
@@ -39,14 +39,14 @@
         {let $items: listItems($list.sections) /}
         {foreach $item in $items}
           <li class="staff-bio js-staff-bio" {if index($item) > 1}style="display: none;"{/if}>
-            {if $item.photo and $item.photo.sizes[0].url}
+            {if $item.photo and $item.photo.sizes?[0]?.url}
               <div class="bio-photo">
-                 {let $height: $item.photo.sizes[0].height /}
-                 {let $width: $item.photo.sizes[0].width /}
+                 {let $height: $item.photo.sizes?[0]?.height /}
+                 {let $width: $item.photo.sizes?[0]?.width /}
                  {let $isWide: $width > $height /}
                  {let $margin: ($width - $height) / 2 /}
                  <img
-                   src="{$item.photo.sizes[0].url}"
+                   src="{$item.photo.sizes?[0]?.url}"
                    class="bio-img"
                    style="{if $isWide}
                            margin-left: -{$margin/$height*106}px;
