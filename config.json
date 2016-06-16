@@ -24,6 +24,20 @@
 			}
 		},
 		{
+			"name": "Locations2",
+    			"locationPageSet": {
+				"urlTemplate": "desktop.urls.locationPageSet2",
+      				"template": "desktop.location.default",
+      				"outputFormat": [
+        				"Html",
+        				"Json"
+      				],
+      				"locationScope": {
+		  			"savedSearch": "nq"
+      				}
+    			}
+  		},
+		{
 			"name": "Autocomplete 1",
 			"autocomplete": {
 				"urlTemplate": "desktop.urls.autocomplete",
@@ -125,8 +139,33 @@
 					}
 				],
 				"locationPageSet": "Locations",
-				"outputFormat": ["Html"]
+				"outputFormat": ["Html", "Json"]
 			}
+		},
+		{
+			"name": "Location Directory 2",
+    			"locationDirectory": {
+      				"levels": [{
+          				"urlTemplate": "desktop.urls.directory2State",
+          				"template": "desktop.directory.stateList",
+          				"field": "nq options",
+          				"orderBy": {
+            					"field": "nq options",
+            					"order": "ascending"
+          				}
+        			},
+        			{
+          				"urlTemplate": "desktop.urls.directory2Location",
+          				"template": "desktop.directory.locationList",
+          				"field": "Locations",
+          				"orderBy": {
+            					"field": "Locations",
+            					"order": "ascending"
+          				}
+        			}],
+      				"locationPageSet": "Locations2",
+      				"outputFormat": ["Html", "Json"]
+    			},
 		},
 		{
 			"name": "Publishing Pause for Testing",
