@@ -15,7 +15,7 @@
 		{
 			"name": "Locations",
 			"locationPageSet": {
-				"urlTemplate": "desktop.urls.locationPageSet1",
+				"urlTemplate": "desktop.urls.locationPageSet11",
 				"template": "desktop.location.default",
 				"outputFormat": ["Html", "Json"],
 				"locationScope" : {
