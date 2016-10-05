@@ -168,7 +168,7 @@
     			}
 		},
 		{
-			"name": "Publishing Pause for Testings",
+			"name": "Publishing Pause for Testingss",
 			"pause_publishing": {
 				"time": 60000
 			}
