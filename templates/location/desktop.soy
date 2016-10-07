@@ -104,6 +104,7 @@
           </article>
         {/if}
         {if $hours and length($hours.days) > 0}
+          {$hours}
           <article id="operation-hours">
             <h2>Hours of Operation</h2>
             {call helpers.hours data="$hours"}
