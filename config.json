@@ -141,7 +141,7 @@
 				"locationPageSet": "Locations",
 				"outputFormat": ["Html", "Json"],
 				"locationScopeOverride": {
-				  "savedSearch": "NY",
+				  "savedSearch": "NY"
 				}
 			}
 		},
