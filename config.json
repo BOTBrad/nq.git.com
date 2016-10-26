@@ -167,7 +167,10 @@
           				}
         			}],
       				"locationPageSet": "Locations2",
-      				"outputFormat": ["Html", "Json"]
+      				"outputFormat": ["Html", "Json"],
+				"locationScopeOverride": {
+				  "savedSearch": "NY"
+				}
     			}
 		},
 		{
