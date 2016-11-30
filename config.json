@@ -21,18 +21,18 @@
 					{
 						"urlTemplate": "url.directoryStateList",
 						"template": "desktop.directory.stateList",
-						"field": "Locations",
+						"field": "State",
 						"orderBy": {
-							"field": "Locations",
+							"field": "State",
 							"order": "ascending"
 						}
 					},
 					{
 						"urlTemplate": "url.directoryCityList",
 						"template": "desktop.directory.cityList",
-						"field": "Locations",
+						"field": "City",
 						"orderBy": {
-							"field": "Locations",
+							"field": "City",
 							"order": "ascending"
 						}
 					},
