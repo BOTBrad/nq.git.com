@@ -7,112 +7,11 @@
 	"templateVersion": 3,
 	"features": [
 		{
-			"name": "My Sitemap",
-			"sitemap": {
-				"urlTemplate": "desktop.urls.xmlSitemap"
-			}
-		},
-		{
 			"name": "Locations",
 			"locationPageSet": {
-				"urlTemplate": "desktop.urls.locationPageSet1",
+				"urlTemplate": "url.location",
 				"template": "desktop.location.default",
-				"outputFormat": ["Html", "Json"],
-				"locationScope" : {
-					"savedSearch" : "foo"
-				}
-			}
-		},
-		{
-			"name": "Locations2",
-    			"locationPageSet": {
-				"urlTemplate": "desktop.urls.locationPageSet2",
-      				"template": "desktop.location.default",
-      				"outputFormat": [
-        				"Html",
-        				"Json"
-      				],
-      				"locationScope": {
-		  			"savedSearch": "nq"
-      				}
-    			}
-  		},
-		{
-			"name": "Autocomplete 1",
-			"autocomplete": {
-				"urlTemplate": "desktop.urls.autocomplete",
-				"locationPageSet": "Locations",
-				"fields": [
-					{
-						"field": "State",
-						"param": "state",
-						"mode": "EQUALS"
-					}
-				]
-			}
-		},
-		{
-			"name": "Searcher 1",
-			"search": {
-				"locationPageSet": "Locations",
-				"locationScopeOverride" : {
-					"savedSearch" : "NY"
-				},
-				"urlTemplate": "desktop.urls.search1",
-				"template": "desktop.search.default",
-				"queryParam": "q",
-				"maxRadiusParam": {
-					"name": "r",
-					"default": 50
-				},
-				"pageResultParam": {
-					"name": "per",
-					"default": 10
-				},
-				"pageToShowParam": "p",
-				"totalResultParam": {
-					"name": "max",
-					"default": 50
-				},
-				"searchFields": [
-					{		
- 						"field": "State",		
- 						"param": "state",		
- 						"mode": "EQUALS"		
- 					}
-				]
-			}
-		},
-		{
-			"name": "Searcher 2",
-			"search": {
-				"locationPageSet": "Locations",
-				"locationScopeOverride" : {
-					"savedSearch" : "NY"
-				},
-				"urlTemplate": "desktop.urls.search2",
-				"template": "desktop.search.default",
-				"queryParam": "q",
-				"maxRadiusParam": {
-					"name": "r",
-					"default": 50
-				},
-				"pageResultParam": {
-					"name": "per",
-					"default": 10
-				},
-				"pageToShowParam": "p",
-				"totalResultParam": {
-					"name": "max",
-					"default": 50
-				},
-				"searchFields": [
-					{		
- 						"field": "State",		
- 						"param": "state",		
- 						"mode": "EQUALS"		
- 					}
-				]
+				"outputFormat": ["Html", "Json"]
 			}
 		},
 		{
@@ -120,58 +19,36 @@
 			"locationDirectory": {
 				"levels": [
 					{
-						"urlTemplate": "desktop.urls.directory1State",
+						"urlTemplate": "url.directoryStateList",
 						"template": "desktop.directory.stateList",
-						"field": "State",
+						"field": "nq multi options",
 						"orderBy": {
-							"field": "State",
+							"field": "nq multi options",
 							"order": "ascending"
 						}
 					},
 					{
-						"urlTemplate": "desktop.urls.directory1Location",
-						"template": "desktop.directory.locationList",
+						"urlTemplate": "url.directoryCityList",
+						"template": "desktop.directory.cityList",
 						"field": "Locations",
 						"orderBy": {
 							"field": "Locations",
 							"order": "ascending"
 						}
+					},
+          				{
+            					"urlTemplate": "url.directoryLocationList",
+           					 "template": "desktop.directory.locationList",
+            					"field": "Locations",
+            					"orderBy": {
+              						"field": "Locations",
+              						"order": "ascending"
+            					}
 					}
 				],
 				"locationPageSet": "Locations",
-				"outputFormat": ["Html", "Json"],
-				"locationScopeOverride": {
-				  "savedSearch": "NY"
-				}
+				"outputFormat": ["Html"]
 			}
-		},
-		{
-			"name": "Location Directory 2",
-    			"locationDirectory": {
-      				"levels": [{
-          				"urlTemplate": "desktop.urls.directory2State",
-          				"template": "desktop.directory.stateList",
-          				"field": "nq options",
-          				"orderBy": {
-            					"field": "nq options",
-            					"order": "ascending"
-          				}
-        			},
-        			{
-          				"urlTemplate": "desktop.urls.directory2Location",
-          				"template": "desktop.directory.branchLocList",
-          				"field": "Locations",
-          				"orderBy": {
-            					"field": "Locations",
-            					"order": "ascending"
-          				}
-        			}],
-      				"locationPageSet": "Locations2",
-      				"outputFormat": ["Html", "Json"],
-				"locationScopeOverride": {
-				  "savedSearch": "NY"
-				}
-    			}
 		},
 		{
 			"name": "Publishing Pause for Testing",
