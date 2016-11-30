@@ -87,5 +87,5 @@
   {if $locale != 'en'}
     {$locale|casing:'lower'}/
   {/if}
-  {$url}
+  {$url|noAutoescape}
 {/template}
