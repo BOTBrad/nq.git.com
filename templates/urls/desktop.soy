@@ -25,8 +25,8 @@
 {template .location}
   {call .urlWithLocale data="all"}
     {param url}
-      {$city|latin:true}-
-      {$state|latin:true}-
+      {$city}-
+      {$state}-
       {$postalCode}-
       {$corporateCode}
       {if $isCollision}-{$id}{/if}
@@ -50,7 +50,7 @@
 {template .directoryCityList}
   {call .urlWithLocale data="all"}
     {param url}
-      {$state|latin:true}
+      {$state}
     {/param}
   {/call}
 {/template}
@@ -63,8 +63,8 @@
 {template .directoryLocationList}
   {call .urlWithLocale data="all"}
     {param url}
-      {$city|latin:true}-
-      {$state|latin:true}
+      {$city}-
+      {$state}
     {/param}
   {/call}
 {/template}
