@@ -21,9 +21,9 @@
 					{
 						"urlTemplate": "url.directoryStateList",
 						"template": "desktop.directory.stateList",
-						"field": "nq multi options",
+						"field": "Locations",
 						"orderBy": {
-							"field": "nq multi options",
+							"field": "Locations",
 							"order": "ascending"
 						}
 					},
