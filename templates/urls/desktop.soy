@@ -1,66 +1,91 @@
-{namespace desktop.urls}
+
+{namespace url}
 
 /**
  */
 {template .xmlSitemap}
-sitemap.xml
+  sitemap.xml
 {/template}
 
 /**
+ */
+{template .htmlSitemap}
+  sitemap.html
+{/template}
+
+/**
+ * @param state
+ * @param city
+ * @param locale
  * @param id
- * @param state
- * @param city
- * @param address1
- */
-{template .locationPageSet1}
-{$state|latin:true|other:'-'|spaces:'-'|casing:'lower'}/{$city|latin:true|other:'-'|spaces:'-'|casing:'lower'}/{$address1|spaces:'-'|latin:true|other:'-'|casing:'lower'}-{$id}.html
-{/template}
-
-/**
- * @param state
- * @param city
  * @param corporateCode
+ * @param postalCode
+ * @param? isCollision
  */
-{template .locationPageSet2}
-    branches/{$state|spaces:'-'|casing:'lower'}/{$city|spaces:'-'|casing:'lower'}-{$corporateCode}
+{template .location}
+  {call .urlWithLocale data="all"}
+    {param url}
+      {$city|latin:true}-
+      {$state|latin:true}-
+      {$postalCode}-
+      {$corporateCode}
+      {if $isCollision}-{$id}{/if}
+    {/param}
+  {/call}
 {/template}
 
 /**
+ * @param locale
  */
-{template .directory1State}
-index.html
+{template .directoryStateList}
+  {call .urlWithLocale data="all"}
+    {param url: 'index.html' /}
+  {/call}
 {/template}
-
-/**
- */
-{template .directory2State}
-branches/index.html
-{/template}
-
 
 /**
  * @param state
+ * @param locale
  */
-{template .directory1Location}
-{$state|latin:true|other:'-'|spaces:'-'|casing:'lower'}.html
+{template .directoryCityList}
+  {call .urlWithLocale data="all"}
+    {param url}
+      {$state|latin:true}
+    {/param}
+  {/call}
 {/template}
 
 /**
+ * @param city
  * @param state
- * @param customByName
+ * @param locale
  */
-{template .directory2Location}
-branches/{$state|spaces:'-'|casing:'lower'|latin:true|other:'-'}/{$customByName['nq options']|spaces:'-'|casing:'lower'|latin:true|other:'-'}
+{template .directoryLocationList}
+  {call .urlWithLocale data="all"}
+    {param url}
+      {$city|latin:true}-
+      {$state|latin:true}
+    {/param}
+  {/call}
 {/template}
 
-{template .search1}
-search.html
+/**
+ * @param locale
+ */
+{template .search}
+  {call .urlWithLocale data="all"}
+    {param url: 'search.html' /}
+  {/call}
 {/template}
 
-{template .search2}
-search2.html
-{/template}
-
-{template .autocomplete}
-autocomplete
+/**
+ * Helper template to insert locale for international pages
+ * @param url
+ * @param locale
+ */
+{template .urlWithLocale}
+  {if $locale != 'en'}
+    {$locale|casing:'lower'}/
+  {/if}
+  {$url |noAutoescape}
 {/template}
