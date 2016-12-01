@@ -5,6 +5,9 @@
 	"liveSite": false,
 	"locales": ["en"],
 	"templateVersion": 3,
+	"locationScope": {
+   	  "savedSearch": "NY"
+  	},
 	"features": [
 		{
 			"name": "Locations",
