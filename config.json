@@ -14,7 +14,10 @@
 			"locationPageSet": {
 				"urlTemplate": "url.location",
 				"template": "desktop.location.default",
-				"outputFormat": ["Html", "Json"]
+				"outputFormat": ["Html", "Json"],
+				"locationScope": {
+   	  				"savedSearch": "NY"
+  				},
 			}
 		},
 		{
