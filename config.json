@@ -17,8 +17,7 @@
 				"outputFormat": ["Html", "Json"],
 				"locationScope": {
    	  				"savedSearch": "NY"
-  				},
-				"pageUrlCustomField": "nq url"
+  				}
 			}
 		},
 		{
