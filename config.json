@@ -50,7 +50,8 @@
             					"orderBy": {
               						"field": "Locations",
               						"order": "ascending"
-            					}
+            					},
+						"urlTemplateOverride": "url.directoryLocationList2",
 					}
 				],
 				"locationPageSet": "Locations",
