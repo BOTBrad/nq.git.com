@@ -50,12 +50,12 @@
             					"orderBy": {
               						"field": "Locations",
               						"order": "ascending"
-            					},
-						"urlTemplateOverride": "url.directoryLocationList2"
+            					}
 					}
 				],
 				"locationPageSet": "Locations",
-				"outputFormat": ["Html"]
+				"outputFormat": ["Html"],
+				"locationPageSetUrlOverride": "url.directoryLocationList2"
 			}
 		},
 		{
