@@ -55,7 +55,10 @@
 				],
 				"locationPageSet": "Locations",
 				"outputFormat": ["Html"],
-				"locationPageSetUrlOverride": "url.directoryLocationList2"
+				"locationScopeOverride": {
+   	  				"savedSearch": "NY-Naiqiao"
+  				},
+				"locationScopeOverrideUrl": "url.directoryLocationList2"
 			}
 		},
 		{
