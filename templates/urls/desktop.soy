@@ -35,6 +35,27 @@
 {/template}
 
 /**
+ * @param state
+ * @param city
+ * @param locale
+ * @param id
+ * @param corporateCode
+ * @param postalCode
+ * @param? isCollision
+ */
+{template .locationOverride}
+  {call .urlWithLocale data="all"}
+    {param url}
+      {$city|noAutoescape}-
+      {$state|noAutoescape}-
+      {$postalCode}-
+      {$corporateCode}
+      {if $isCollision}-{$id}{/if}-override
+    {/param}
+  {/call}
+{/template}
+
+/**
  * @param locale
  */
 {template .directoryStateList}
