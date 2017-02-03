@@ -39,7 +39,6 @@
  * @param city
  * @param locale
  * @param id
- * @param corporateCode
  * @param postalCode
  * @param? isCollision
  */
@@ -48,7 +47,7 @@
     {param url}
       {$city|noAutoescape}-
       {$state|noAutoescape}-
-      {$postalCode}--override
+      {$postalCode}-{if $isCollision}-{$id}{/if}-override
     {/param}
   {/call}
 {/template}
