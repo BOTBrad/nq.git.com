@@ -55,7 +55,7 @@
 				"locationScopeOverride": {
    	  				"savedSearch": "NY"
   				},
-				"locationScopeOverrideUrl": "url.directoryLocationList2"
+				"locationScopeOverrideUrl": "url.locationOverride"
 			}
 		},
 		{
