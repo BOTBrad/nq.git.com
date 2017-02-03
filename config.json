@@ -5,9 +5,6 @@
 	"liveSite": false,
 	"locales": ["en"],
 	"templateVersion": 3,
-	"locationScope": {
-   	  "savedSearch": "NY"
-  	},
 	"features": [
 		{
 			"name": "Locations",
@@ -16,7 +13,7 @@
 				"template": "desktop.location.default",
 				"outputFormat": ["Html", "Json"],
 				"locationScope": {
-   	  				"savedSearch": "NY"
+   	  				"savedSearch": "Naiqiao"
   				},
 				"pageUrlCustomField": "nq url"
 			}
@@ -56,7 +53,7 @@
 				"locationPageSet": "Locations",
 				"outputFormat": ["Html"],
 				"locationScopeOverride": {
-   	  				"savedSearch": "Naiqiao"
+   	  				"savedSearch": "NY"
   				},
 				"locationScopeOverrideUrl": "url.directoryLocationList2"
 			}
